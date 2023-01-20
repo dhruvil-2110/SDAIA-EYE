@@ -6,7 +6,7 @@ Next it contains training and testing data which I bifurcated into two separate 
 Then I converted the annotations given into standard PASCAL VOC Format
 I uploaded annotations and their corresponding images on roboflow site for preprocess
 By adding preprocessing steps such as : 
-Rotation: Between -9° and +9°
+Rotation: Between -9Â° and +9Â°
 Saturation: Between -69% and +69%
 Exposure: Between -14% and +14%
 Blur: Up to 4.25px
@@ -18,3 +18,8 @@ Next we trained our model using yolov5 architecture
 The trained model gave output in form of xcenter, ycenter, width, height which I converted into desired submission format
 
 I can make it better if Some more resources and time I get as the training time was high. So this is the main procedure I followed through out my project
+
+Files : 
+Dataset_preparation.ipynb - For splitting into test and train and converting into PASAL VOC format 
+yoloV5.ipynb              - Trained model using this file generated test inference using this file
+submission_file.ipynb     - Converted yolov output format to submission format
