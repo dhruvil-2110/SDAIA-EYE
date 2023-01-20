@@ -1,0 +1,20 @@
+Visual pollution is relatively high issue as compared to other environmental contaminants. Primary symptoms of visual pollution include identity loss, eye fatigue, distraction, and decreases in the diversity of opinions. Additionally, it has been demonstrated to intensify biological stress reactions and impair equilibrium. In order to reduce this I propose a model which can accurately identifies this visual pollution. The dataset of the images containing 11 classes of visual pollution was provided by SDAIA which gives a better support to my project.
+
+Procedure : 
+First extracted all the files from the dataset provided
+Next it contains training and testing data which I bifurcated into two separate folders - Train:7874 Test:2092
+Then I converted the annotations given into standard PASCAL VOC Format
+I uploaded annotations and their corresponding images on roboflow site for preprocess
+By adding preprocessing steps such as : 
+Rotation: Between -9° and +9°
+Saturation: Between -69% and +69%
+Exposure: Between -14% and +14%
+Blur: Up to 4.25px
+Noise: Up to 2% of pixels
+Mosaic: Applied
+And converted dataset of 7874 to double 15748 from which training images are 14178, val=785, test=785
+
+Next we trained our model using yolov5 architecture
+The trained model gave output in form of xcenter, ycenter, width, height which I converted into desired submission format
+
+I can make it better if Some more resources and time I get as the training time was high. So this is the main procedure I followed through out my project
